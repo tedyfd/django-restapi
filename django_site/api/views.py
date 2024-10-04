@@ -13,7 +13,7 @@ class BlogPostListCreate(generics.ListCreateAPIView):
         BlogPost.objects.all().delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
 
-class BlogPostRetriveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+class BlogPostRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = BlogPost.objects.all()
     serializer_class = BlogPostSerializer
     lookup_field = "pk"
